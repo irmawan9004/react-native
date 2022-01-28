@@ -1,19 +1,18 @@
 import React from 'react';
-import {Text, View, ScrollView} from 'react-native';
-import Position from './pages/Position';
+import {View, ScrollView} from 'react-native';
+import Flexbox from './pages/Flexbox';
+import ReactNativeSvg from './pages/ReactNativeSvg';
 
 const App = () => {
   return (
     <View>
       <ScrollView>
-        <Position />
+        {/* <Position /> */}
+        {/* <Flexbox /> */}
+        <ReactNativeSvg />
       </ScrollView>
     </View>
   );
-};
-
-const Home = () => {
-  return <Text>Ganteng</Text>;
 };
 
 export default App;
