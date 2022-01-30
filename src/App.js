@@ -1,17 +1,18 @@
 import React from 'react';
-import {View, ScrollView} from 'react-native';
-import Flexbox from './pages/Flexbox';
-import ReactNativeSvg from './pages/ReactNativeSvg';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Welcome from './pages/Welcome';
+import Login from './pages/Login';
 
+const Stack = createNativeStackNavigator();
 const App = () => {
   return (
-    <View>
-      <ScrollView>
-        {/* <Position /> */}
-        {/* <Flexbox /> */}
-        <ReactNativeSvg />
-      </ScrollView>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Welcome">
+        <Stack.Screen name="Welcome" component={Welcome}></Stack.Screen>
+        <Stack.Screen name="Login" component={Login}></Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
